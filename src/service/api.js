@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8000";
+const URL = "https://thegredew.herokuapp.com";
 
 export const createPost = async (post) => {
    try{
