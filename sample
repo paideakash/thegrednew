@@ -1,0 +1,49 @@
+                <div>
+                   <img src="https://images.pexels.com/photos/11450448/pexels-photo-11450448.jpeg"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>lire</p>
+                     <p>$3450</p>
+                    </div>  
+                </div>  
+                <div>
+                   <img src="https://images.pexels.com/photos/3387577/pexels-photo-3387577.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>Kcra</p>
+                     <p>$3400</p>
+                    </div>  
+                </div>  
+                <div>
+                   <img src="https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>pfotty</p>
+                     <p>$3930</p>
+                    </div>  
+                </div>  
+                <div>
+                   <img src="https://images.pexels.com/photos/3387577/pexels-photo-3387577.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>iwsty</p>
+                     <p>$3200</p>
+                    </div>  
+                </div>  
+                <div>
+                   <img src="https://images.pexels.com/photos/2916814/pexels-photo-2916814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>sapty</p>
+                     <p>$3340</p>
+                    </div>  
+                </div>  
+                <div>
+                   <img src="https://images.pexels.com/photos/7938382/pexels-photo-7938382.jpeg"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>wwety</p>
+                     <p>$3220</p>
+                    </div>  
+                </div>
+                <div>
+                   <img src="https://images.pexels.com/photos/11450448/pexels-photo-11450448.jpeg"></img>
+                   <div className="content">
+                     <p style={{color:"black" ,fontWeight:"800"}}>tapt</p>
+                     <p>$3423</p>
+                    </div>  
+                </div> 
