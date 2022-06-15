@@ -1,23 +1,46 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom"
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
+import { userLoginReducer } from "./reducers/userReducer";
+import { logout } from "./actions/userActions";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const userLogin = useSelector((state) => state.userLogin);
+    const {loading, error, userInfo} = userLogin;
+    // console.log(userInfo);
+    console.log(userInfo)
+    
+    const logoutFunc = () => {
+        dispatch(logout());
+        navigate("/login");
+    }
+
+    const loginFunc = () => {
+        navigate("/login");
+    }
+    
     return(
         <>
             <div className="nav">
                 <div className="navchild divone">DEW</div>
                 <div className="navchild divtwo">
-                   <Link className="navlink"  to={"/"}><a >Home</a></Link>
-                   <Link className="navlink"  to={"/aboutus"}><a >About us</a></Link>
-                   <Link className="navlink"  to={"/contactus"}><a >Contact us</a></Link>
+                <a style={{textDecoration:"none"}} href="/">Home</a>
+                   <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">About us</a>
+                   <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">Contact us</a>
+                   {userInfo ? <Link to={"/aboutus"} style={{textDecoration:"none"}} >Profile</Link> : null}
                    <Link className="navlink"  to={"/blog"}><a className="navadd">Add</a></Link>
                 </div>
 
                 <div className="navchild divthree">
-                    <a>F</a>
-                    <a>I</a>
-                    <a>T</a>
+                    {/* <a>F</a>
+                    <a>I</a> */}
+                     {userInfo ? <button onClick={logoutFunc} style={{border:"none", marginRight:"10px", fontWeight:"550", fontSize:"110%", color:"#9D9D9D"}}>LOGOUT</button> 
+                     :<button onClick={loginFunc} style={{border:"none", marginRight:"10px", fontWeight:"600", fontSize:"120%", color:"#9D9D9D"}}>LOGIN</button>
+                     }
                 </div>
             </div>
         </>

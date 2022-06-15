@@ -12,7 +12,9 @@ const Products = () => {
              try{
                 let data = await getAllPosts();
                 setItems(data); 
-                console.log(data);     
+                // let data;
+                // setItems(data);                 
+                // console.log(data);     
              }catch(err){
                  console.log(`some error in fetching data`);
              }          

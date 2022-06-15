@@ -1,30 +1,30 @@
-import React, {useEffect} from "react";
-import Body from "./Body";
-import Products from "./Products";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import { userLoginReducer } from "./reducers/userReducer";
 
-const Home =() => {
-
+const Aboutus =()=>{
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const userLogin = useSelector((state) => state.userLogin);
     const {loading, error, userInfo} = userLogin;
     // console.log(userInfo);
+    console.log(userInfo)
 
     useEffect(()=>{  
-        if(!userInfo){
-            navigate("/");
-        }
-    },[userInfo]);
+            console.log(`hello`);
+            if(!userInfo){
+                navigate("/")
+            }
+    },[]);
+    
 
     return(
-        <>
-           <Body />
-           <Products />
-        </>
+       <>
+           <h2>{`hi ${userInfo.username}`}</h2>
+           <h2>{`email : ${userInfo.email}`}</h2>
+       </>
     )
 }
 
-export default Home;
+export default Aboutus;
