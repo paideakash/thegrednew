@@ -1,8 +1,8 @@
 import {LOGIN_REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS, USER_LOGOUT} from "../constants/userConstants.js"
 import axios from "axios";
 
-// const URL = "http://localhost:8000";
-const URL = "https://thegredew.herokuapp.com";
+const URL = "http://localhost:8000";
+// const URL = "https://thegredew.herokuapp.com";
 
 export const loginFunc = (post)=> async (dispatch) => {
     try{
