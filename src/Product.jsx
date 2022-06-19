@@ -50,7 +50,7 @@ const Product = ({item}) => {
             setIsLiked(!isLiked);   
             await likefunc(id ,userInfo);
         }else{
-            alert("Login to like and post :)");
+            // alert("Login to like and post :)");
         }
     }
 

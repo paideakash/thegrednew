@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     const addFunc=()=>{
-        alert("Login to post");
+        // alert("Login to post");
     }
     
     return(
