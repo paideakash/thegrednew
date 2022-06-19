@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import { userLoginReducer } from "./reducers/userReducer";
 import { likefunc } from "./actions/userActions";
+import normalizeWindowsPath from "tar/lib/normalize-windows-path";
 
 const Product = ({item}) => {
 
@@ -29,8 +30,6 @@ const Product = ({item}) => {
         }
     }
 
-
-
     useEffect(()=>{
         if(isTrue === 1){
             setIsLiked(true);
@@ -50,6 +49,8 @@ const Product = ({item}) => {
             isLiked ? setX( "#DFDFDE") : setX("#F7E9D7");
             setIsLiked(!isLiked);   
             await likefunc(id ,userInfo);
+        }else{
+            window.alert("Login to like and post :)");
         }
     }
 
@@ -59,7 +60,7 @@ const Product = ({item}) => {
     return(
         <>
                 <div className="detaildiv">
-                          <a style={{height:"80%",width:"100%"}} href={`details/${item._id}`}>
+                          <a style={{height:"80%",width:"100%"}} href={ `details/${item._id}` ||url}>
                                 <img src={url} style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"4%"}} ></img>                              
                           </a>
                       <div className="content" style={{width:"100%", height:"4vmax"}}>

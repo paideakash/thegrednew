@@ -24,12 +24,14 @@ const Blog =() => {
   useEffect(()=>{  
           console.log(`hello`);
           if(!userInfo){
-              navigate("/")
-          }
+            window.alert("login to post");
+              navigate("/");
+          }else{
+            initialvalue.username = userInfo.username;
+          }          
   },[navigate]);
 
     const url = "https://images.pexels.com/photos/7938382/pexels-photo-7938382.jpeg";
-    initialvalue.username = userInfo.username;
 
     const [post, setPost] = useState(initialvalue);
      

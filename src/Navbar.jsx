@@ -22,6 +22,10 @@ const Navbar = () => {
     const loginFunc = () => {
         navigate("/login");
     }
+
+    const addFunc=()=>{
+        window.alert("Login to post");
+    }
     
     return(
         <>
@@ -32,7 +36,8 @@ const Navbar = () => {
                    <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">About us</a>
                    <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">Contact us</a>
                    {userInfo ? <Link to={"/aboutus"} style={{textDecoration:"none"}} >Profile</Link> : null}
-                   <Link className="navlink"  to={"/blog"}><a className="navadd">Add</a></Link>
+                   {userInfo ? <Link className="navlink"  to={"/blog"}><a className="navadd">Post</a></Link>: <Link className="navlink" onClick={addFunc} to={"/"}><a className="navadd">Post</a></Link>}
+                   
                 </div>
 
                 <div className="navchild divthree">
